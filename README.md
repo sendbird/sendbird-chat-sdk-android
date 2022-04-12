@@ -95,8 +95,6 @@ dependencies {
 }
 ```
 
-Alternatively, you can download the `.aar` file from this repository. Copy this file into your `libs/` folder, and make sure you include the library in your `build.gradle` file as well.
-
 #### - TLS 1.3
 
 TLS 1.3 is enabled by default in Sendbird SDK for Android. To disable it, please include the following configuration to the gradle dependency:
