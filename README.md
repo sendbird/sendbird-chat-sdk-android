@@ -1,9 +1,9 @@
 # [Sendbird](https://sendbird.com) Chat SDK for Android
 
-[![Platform](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/sendbird/SendBird-SDK-Android)
-[![Languages](https://img.shields.io/badge/language-kotlin-orange.svg)](https://github.com/sendbird/SendBird-SDK-Android)
-[![Maven](https://img.shields.io/badge/maven-v4.0.0-green.svg)](https://github.com/sendbird/SendBird-SDK-Android/tree/master/com/sendbird/sdk/sendbird-android-sdk/4.0.0)
-[![Commercial License](https://img.shields.io/badge/license-Commercial-brightgreen.svg)](https://github.com/sendbird/SendBird-SDK-Android/blob/master/LICENSE.md)
+[![Platform](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/sendbird/sendbird-chat-sdk-android)
+[![Languages](https://img.shields.io/badge/language-kotlin-orange.svg)](https://github.com/sendbird/sendbird-chat-sdk-android)
+[![This version of 'sendbird-chat' @ Cloudsmith](https://api-prd.cloudsmith.io/v1/badges/version/sendbird/release/maven/sendbird-chat/4.0.0-beta/a=noarch;xg=com.sendbird.sdk/?render=true)](https://cloudsmith.io/~sendbird/repos/release/packages/detail/maven/sendbird-chat/4.0.0-beta/a=noarch;xg=com.sendbird.sdk/)
+[![Commercial License](https://img.shields.io/badge/license-Commercial-brightgreen.svg)](https://github.com/sendbird/sendbird-chat-sdk-android/blob/main/LICENSE.md)
 
 ## Table of contents
 
@@ -90,7 +90,7 @@ Then, add the dependency to the project's top-level `build.gradle` file:
 ```gradle
 dependencies {
     ...
-    implementation 'com.sendbird.sdk:sendbird-chat:4.0.0'
+    implementation 'com.sendbird.sdk:sendbird-chat:4.0.0-beta'
     ...
 }
 ```
@@ -105,7 +105,7 @@ TLS 1.3 is enabled by default in Sendbird SDK for Android. To disable it, please
 
 ```gradle
 dependencies {
-    implementation ('com.sendbird.sdk:sendbird-android-sdk:4.0.0') {
+    implementation ('com.sendbird.sdk:sendbird-chat:4.0.0-beta') {
         exclude group: 'org.conscrypt', module: 'conscrypt-android'
     }
 }
