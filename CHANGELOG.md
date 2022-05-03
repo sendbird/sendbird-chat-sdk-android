@@ -1,3 +1,7 @@
+### v4.0.0-beta.3 (May 3, 2022)
+- Added `HiddenChannelFilter.ALL` for GroupChannelListQuery
+- Fixed bug where nicknameContainsFilter is filtered incorrectly in regards to case sensitivity
+
 ### v4.0.0.beta.2 (Apr 28, 2022)
 - Added Scheduled Message Feature.
   - Added `GroupChannel.createScheduledUserMessage()`.
