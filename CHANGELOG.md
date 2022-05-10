@@ -1,3 +1,6 @@
+### v4.0.0-beta.4 (May 10, 2022)
+- Fixed a bug that failed to get a channel that has invalid metadata.
+
 ### v4.0.0-beta.3 (May 3, 2022)
 - Added `HiddenChannelFilter.ALL` for GroupChannelListQuery
 - Fixed bug where nicknameContainsFilter is filtered incorrectly in regards to case sensitivity
