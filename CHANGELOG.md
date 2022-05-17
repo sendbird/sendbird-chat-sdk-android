@@ -1,3 +1,9 @@
+# Change Log
+
+### v4.0.0-beta.5 (May 17, 2022)
+- Added `GroupChannel.sendScheduledMessageNow(Long, CompletionHandler?)`
+- Fixed bug where typing indicator does not disappear after the internet has been lost.
+
 ### v4.0.0-beta.4 (May 10, 2022)
 - Fixed a bug that failed to get a channel that has invalid metadata.
 
