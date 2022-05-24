@@ -1,5 +1,9 @@
 # Change Log
 
+### v4.0.0-beta.6 (May 24, 2022)
+- Refactor SDK's logs. 
+- Log level for SDK can now be set in `SendbirdChat.init` with `InitParams.logLevel`. The current default log level is `Log.WARN`.
+
 ### v4.0.0-beta.5 (May 17, 2022)
 - Added `GroupChannel.sendScheduledMessageNow(Long, CompletionHandler?)`
 - Fixed bug where typing indicator does not disappear after the internet has been lost.
