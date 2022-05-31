@@ -1,5 +1,8 @@
 # Change Log
 
+### v4.0.0-beta.7 (May 31, 2022)
+- Added `BaseMessage.scheduleInfo` in `serialize()` and `deserialize()`.
+
 ### v4.0.0-beta.6 (May 24, 2022)
 - Refactor SDK's logs. 
 - Log level for SDK can now be set in `SendbirdChat.init` with `InitParams.logLevel`. The current default log level is `Log.WARN`.
