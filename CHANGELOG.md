@@ -1,5 +1,36 @@
 # Change Log
 
+### v4.0.0-beta.8 (Jun 8, 2022)
+- Contains breaking changes since last beta release.
+  1. Moved nested classes to the top level.
+      - i.e. `com.sendbird.android.user.query.UserListQuery.UserListQueryResultHandler` → `com.sendbird.android.handler.UserListQueryResultHandler`.
+  2. Removed setter functions that return the itself.
+      - For Kotlin, use property syntax `property = value`.
+      - For Java, all `set*()` functions don't return itself.
+  3. Removed redundant properties that has an alternative.
+      - i.e.)
+        - `PreviousMessageListQuery.shouldIncludeMetaArray()` &rarr; `PreviousMessageListQuery.messagePayloadFilter.includeMetaArray`.
+        - `GroupChannelCreateParams.addUser`, `GroupChannelCreateParams.addUsers` &rarr; `GroupChannelCreateParams.users`.
+  4. Renamed inconsistent getter functions to auto generated getter methods for Java.
+      - For Kotlin, use property syntax `class.property`.
+      - For Java, it's auto generated to `get*()`.
+  5. Replace builder classes with class constructors
+  6. Removed all `Enum.from(value:String?)` functions.
+  7. Static function changed to non-static.
+      - `OpenChannelCreateParams.clone()`
+  8. Rename `SendbirdChat.Options.useMemberAsMessageSender` to `SendbirdChat.Options.useMemberInfoInMessage`.
+      - `useMemberInfoInMessage` now applies to both `BaseMessage.sender` and `BaseMessage.mentionedUsers`.
+  9. Remove all setters for `Query` classes and made query properties immutable.
+      - Added corresponding `Params` classes.
+  10. Removed + Renamed methods.
+      - Removed
+        - `GroupChannel.invite(User, CompletionHandler?)`.
+        - `GroupChannel.invite(String, CompletionHandler?)`.
+        - `GroupChannel.invite(List<User>, CompletionHandler?)`.
+      - Renamed
+        - `GroupChannel.inviteWithUserIds(List<String>, CompletionHandler?)` &rarr; `GroupChannel.invite(List<String>, CompletionHandler?)`.
+        - `com.sendbird.android.handler.MyGroupChannelChangeLogsHandler` &rarr; `com.sendbird.android.handler.GroupChannelChangeLogsHandler`.
+
 ### v4.0.0-beta.7 (May 31, 2022)
 - Added `BaseMessage.scheduleInfo` in `serialize()` and `deserialize()`.
 
