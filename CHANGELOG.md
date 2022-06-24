@@ -1,5 +1,8 @@
 # Change Log
 
+### v4.0.1 (Jun 24, 2022)
+- Fixed a bug where both file object and file url in file message gets cleared when serialized/deserialized.
+
 ### v4.0.0 (Jun 14, 2022)
 > To see detailed changes for below items, please refer to the [migration guide](https://sendbird.com/docs/chat/v4/android/getting-started/migration-guide)
 
