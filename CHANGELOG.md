@@ -1,5 +1,9 @@
 # Changelog
 
+### v4.0.2 (Jun 28, 2022)
+- Changed `GroupChannel.createScheduledUserMessage` and `GroupChannel.createScheduledFileMessage` to return corresponding `SendingStatus.PENDING` message object.
+- Fixed a bug where when reconnected, an updated message gets removed and added again in `MessageCollection`.
+
 ### v4.0.1 (Jun 24, 2022)
 - Fixed a bug where both file object and file url in file message gets cleared when serialized/deserialized.
 
