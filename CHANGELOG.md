@@ -1,4 +1,4 @@
-# Change Log
+# Changelog
 
 ### v4.0.1 (Jun 24, 2022)
 - Fixed a bug where both file object and file url in file message gets cleared when serialized/deserialized.
