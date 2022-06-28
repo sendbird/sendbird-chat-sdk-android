@@ -1,3 +1,5 @@
+# Changelog
+
 ### v4.0.0 (Jun 14, 2022)
 - Added `MyMemberStateFilter`
   - `GroupChannelListQuery.memberStateFilter` &rarr; `GroupChannelListQuery.myMemberStateFilter`
