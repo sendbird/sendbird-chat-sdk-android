@@ -1,5 +1,11 @@
 # Changelog
 
+### v4.0.3 (Jun 29, 2022)
+- Fixed bugs
+  - Pending message doesn't serialize propery when `UserMessageCreateParams.mentionedUsers` is set with a `Member` object
+  - Canceled messages not being removed from the `MessageCollection`
+  - The `requestId` of a pending message differs from the scheduled message (and the actual sent message)
+
 ### v4.0.2 (Jun 28, 2022)
 - Changed `GroupChannel.createScheduledUserMessage` and `GroupChannel.createScheduledFileMessage` to return corresponding `SendingStatus.PENDING` message object.
 - Fixed a bug where when reconnected, an updated message gets removed and added again in `MessageCollection`.
