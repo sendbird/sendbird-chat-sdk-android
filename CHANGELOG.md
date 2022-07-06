@@ -1,5 +1,9 @@
 # Changelog
 
+### v4.0.4 (Jul 6, 2022)
+- Modified `MessageCollection` to handle events for `channel.translateUserMessage()`
+  - When a message is translated, it's corresponding event will be delivered by `MessageCollectionHandler.onMessagesUpdated()` with `MessageContext.CollectionEventSource.EVENT_MESSAGE_UPDATED`
+
 ### v4.0.3 (Jun 29, 2022)
 - Fixed bugs
   - Pending message doesn't serialize propery when `UserMessageCreateParams.mentionedUsers` is set with a `Member` object
