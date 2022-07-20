@@ -1,5 +1,8 @@
 # Changelog
 
+### v4.0.5 (Jul 20, 2022)
+- Improved API reference page's readability
+
 ### v4.0.4 (Jul 6, 2022)
 - Modified `MessageCollection` to handle events for `channel.translateUserMessage()`
   - When a message is translated, it's corresponding event will be delivered by `MessageCollectionHandler.onMessagesUpdated()` with `MessageContext.CollectionEventSource.EVENT_MESSAGE_UPDATED`
