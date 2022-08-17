@@ -1,5 +1,8 @@
 # Changelog
 
+### v4.0.6 (Aug 17, 2022)
+- Fixed a bug where `onSessionTokenRequired` is not called immediately after session expires
+
 ### v4.0.5 (Jul 20, 2022)
 - Improved API reference page's readability
 
