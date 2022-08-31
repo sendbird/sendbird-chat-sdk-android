@@ -1,5 +1,9 @@
 # Changelog
 
+### v4.0.7 (Aug 31, 2022)
+- Added Boolean switch to remove operator status when leaving channels (`GroupChannel.leave(shouldRemoveOperatorStatus: Boolean = false, handler: CompletionHandler)`)
+- Added MessageSearchQuery's totalCount and made it public (MessageSearchQuery.totalCount)
+
 ### v4.0.6 (Aug 17, 2022)
 - Fixed a bug where `onSessionTokenRequired` is not called immediately after session expires
 
