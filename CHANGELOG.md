@@ -1,5 +1,8 @@
 # Changelog
 
+### v4.0.8 (Sep 2, 2022)
+- Fixed a bug where `GroupChannelListQuery.next()` fails due to user ID not being properly encoded in the url
+
 ### v4.0.7 (Aug 31, 2022)
 - Added Boolean switch to remove operator status when leaving channels (`GroupChannel.leave(shouldRemoveOperatorStatus: Boolean = false, handler: CompletionHandler)`)
 - Added MessageSearchQuery's totalCount and made it public (MessageSearchQuery.totalCount)
