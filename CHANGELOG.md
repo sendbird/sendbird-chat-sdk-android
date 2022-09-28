@@ -1,5 +1,10 @@
 # Changelog
 
+### v4.0.9 (Sep 28, 2022)
+- Added `nicknameStartsWithFilter` and `nicknameExactMatchFilter` in `GroupChannelListQueryParams`
+- Implemented history of channel membership where clients can now track whether users have joined or left the channel (`MemberState.LEFT` for left members of a `GroupChannel`)
+- Improved thread management to reduce total thread count when deleted
+
 ### v4.0.8 (Sep 2, 2022)
 - Fixed a bug where `GroupChannelListQuery.next()` fails due to user ID not being properly encoded in the url
 
