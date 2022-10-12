@@ -1,11 +1,5 @@
 # Changelog
 
-## v4.1.10-test (Oct 11, 2022)
-* change1
-* change2
-* change3
-* change4
-
 ### v4.0.9 (Sep 28, 2022)
 - Added `nicknameStartsWithFilter` and `nicknameExactMatchFilter` in `GroupChannelListQueryParams`
 - Implemented history of channel membership where clients can now track whether users have joined or left the channel (`MemberState.LEFT` for left members of a `GroupChannel`)
