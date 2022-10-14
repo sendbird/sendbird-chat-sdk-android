@@ -48,8 +48,8 @@ Stay tuned for updates as we are rolling out more exciting features and see belo
     - `GroupChannel.getPollChangeLogsSinceTimestamp()`
     - `GroupChannel.getPollChangeLogsSinceToken()`
     - `PollData`
-    - `BaseChannelHandler.onPollUpdated()`
-    - `BaseChannelHandler.onPollDeleted()`
+    - `GroupChannelHandler.onPollUpdated()`
+    - `GroupChannelHandler.onPollDeleted()`
 ### Options
 - Create
     - `PollCreateParams.optionTexts`
@@ -67,7 +67,7 @@ Stay tuned for updates as we are rolling out more exciting features and see belo
     - `GroupChannel.deletePollOption()`
 - Others:
     - `PollOption`
-    - `BaseChannelHandler.onPollVoted()`
+    - `GroupChannelHandler.onPollVoted()`
     - `PollStatus`
     - `PollVoteEvent`
     - `PollUpdateEvent`
