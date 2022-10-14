@@ -50,7 +50,7 @@ Stay tuned for updates as we are rolling out more exciting features and see belo
     - `PollData`
     - `BaseChannelHandler.onPollUpdated()`
     - `BaseChannelHandler.onPollDeleted()`
-      ##### Options
+### Options
 - Create
     - `PollCreateParams.optionTexts`
     - `GroupChannel.addPollOption()`
