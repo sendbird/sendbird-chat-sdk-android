@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.1 (Oct 20, 2022)
+
+- Changed constructor of PollData to public.
+
 ## v4.1.0 (Oct 14, 2022)
 
 # Features
