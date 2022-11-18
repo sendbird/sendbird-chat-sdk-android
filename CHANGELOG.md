@@ -2,7 +2,7 @@
 
 ## v4.1.2 (Nov 18, 2022)
 
-###Improvements
+### Improvements
 
 - Fixed MessageCollectionHandler.onMessagesUpdated() not being fired when sending a FILE message on an app built with Proguard on.
 
