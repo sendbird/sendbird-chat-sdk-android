@@ -1,5 +1,18 @@
 # Changelog
 
+## v4.1.3 (Nov 21, 2022)
+
+### Improvements
+
+- Added message filtering in `pendingMessages` and `failedMessages` of a `MessageCollection` using the `MessageListParams`
+- Removed `isAnonymous` flag from Poll related interfaces
+  - `Poll.isAnonymous`
+  - `PollCreateParams.isAnonymous`
+  - `PollUpdateParams.isAnonymous`
+- Fixed pending message not being delivered by `MessageCollectionHandler.onMessagesAdded()` when sending a user message on an app built with Proguard on.
+- Fixed crash when printing `CustomizableMessage.toString()`
+- Fixed `ConcurrentModificationException` from `OpenChannel.toString()`
+
 ## v4.1.2 (Nov 18, 2022)
 
 ### Improvements
