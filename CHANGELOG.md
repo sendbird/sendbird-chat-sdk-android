@@ -1,5 +1,28 @@
 # Changelog
 
+## v4.2.0 (Dec 09, 2022)
+
+### **Features**
+### **Pinned Message :pushpin:**
+Pinned Message is released. You can now maintain a special set of messages (up to 10 per channel) that you want everyone in the channel to share. It can be anything from announcements, surveys, upcoming events, and any many more. Pin your messages and never miss them!
+Stay tuned for updates as we are rolling out more exciting features and see below for exact specifications:point_down:
+#### **Specification**
+- Pin when sending a message
+  - `UserMessageCreateParams.isPinnedMessage: Boolean = false`
+  - `FileMessageCreateParams.isPinnedMessage: Boolean = false`
+- Pin existing message
+  - `GroupChannel.pinMessage(Long, CompletionHandler?)`
+- Unpin a message
+  - `GroupChannel.unpinMessage(Long, CompletionHandler?)`
+- Pinned messages
+  - `GroupChannel.lastPinnedMessage: BaseMessage? = null`
+  - `GroupChannel.pinnedMessageIds: List<Long> = emptyList()`
+
+
+#### **We strongly recommend using Collections (Message, Channel) to implement Pinned Messages as it would automatically take care of numerous events out of the box when messages are created, updated, and deleted.**
+------
+### **Improvements**
+- Fixed `ConcurrentModificationException` from `VersioningCache.toString()`
 ## v4.1.3 (Nov 21, 2022)
 
 ### Improvements
