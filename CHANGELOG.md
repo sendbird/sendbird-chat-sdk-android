@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.2.1 (Jan 09, 2023)
+### **Improvements**
+- Fixed possible ANR in `SendbirdChat.init()`
+
 ## v4.2.0 (Dec 09, 2022)
 
 ### **Features**
