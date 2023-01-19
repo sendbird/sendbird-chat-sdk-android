@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.2.2 (Jan 18, 2023)
+
+### **Features**
+
+You can now set longer timeout value (Previously 10s) for session token expiry. (Default: 60s, Maximum: 1800s). This means that Sendbird SDK will wait longer for your new session token, making it easier for you to reconnect to our service. 
+
+- `SendbirdChat.Options.setSessionTokenRefreshTimeout(Int)`
+
+### **Improvements**
+
+- Fixed bug where `BaseChannelHandler.onChannelChanged` and `GroupChannelHandler.onPinnedMessageUpdated` are not being called when the pinned message is updated
+
 ## v4.2.1 (Jan 09, 2023)
 ### **Improvements**
 - Fixed possible ANR in `SendbirdChat.init()`
