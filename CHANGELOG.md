@@ -1,10 +1,5 @@
 # Changelog
 
-## v4.2.1-test (Jan 30, 2023)
-
-### **Improvements**
-- Release automation test.
-
 ## v4.2.2 (Jan 18, 2023)
 
 ### **Features**
