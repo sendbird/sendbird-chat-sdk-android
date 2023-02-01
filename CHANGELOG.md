@@ -7,10 +7,10 @@
 Participant class in Open Channel
 
 Participant is a new interface for User who joined Open Channel. It's optimized for scalability and contains much lighter information about the User than a Member in Group Channel. 
-Now clients can implement Open Channels easier in SDK with more built-in capabilities. You can compare how Member, Participant, and User are different [here]("https://sendbird.com/docs/chat/v4/android/user/overview-user#2-user-types")
+Now clients can implement Open Channels easier in SDK with more built-in capabilities. You can compare how Member, Participant, and User are different [here](https://sendbird.com/docs/chat/v4/android/user/overview-user#2-user-types)
 
 - `Participant` holds essential information about the participant like below. They contain their muted status (`is_muted`) on top of basic User information 
-```
+```kotlin
 class Participant : User {
 
     val isMuted: Boolean
