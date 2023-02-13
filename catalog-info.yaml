@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Sendbird Chat Public SDK Android v4
+  description: Sendbird Chat Public SDK for Android v4
+  annotations:
+    github.com/project-slug: sendbird/sendbird-chat-sdk-android
+spec:
+  type: library
+  lifecycle: production
+  owner: dep-client-platform
+  system: sendbird-chat
