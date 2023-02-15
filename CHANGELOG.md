@@ -1,5 +1,28 @@
 # Changelog
 
+## v4.4.0 (Feb 15, 2023)
+
+### **Features**
+
+### Disconnect websocket only
+
+When you call `SendbirdChat.disconnect`, it disconnects the WebSocket and clears local cache. You can think of it as logging out.
+
+In some cases, you need to only disconnect the WebSocket. You can now do it by calling `SendbirdChat.disconnectWebSocket`.
+It only disconnects the WebSocket and preserves the local cache.
+```kotlin
+SendbirdChat.disconnectWebSocket {
+    // onDisconnected
+}
+```
+### **Improvements**
+- Fixed bug where `Poll.votedPollOptionIds` is not properly updated when a poll option is deleted
+- Added default arguments for following functions. You can now call these functions without the `Params` arguments
+  - `BaseChannel.getMessageChangeLogsSinceTimestamp`
+  - `BaseChannel.getMessageChangeLogsSinceToken`
+  - `SendbirdChat.getMyGroupChannelChangeLogsByTimestamp`
+  - `SendbirdChat.getMyGroupChannelChangeLogsByToken`
+
 ## v4.3.0 (Feb 01, 2023)
 
 ### **Features**
