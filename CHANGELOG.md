@@ -15,7 +15,21 @@ SendbirdChat.disconnectWebSocket {
     // onDisconnected
 }
 ```
+To connect again after disconnecting with `disconnectWebSocket()`,
+use [SendbirdChat.connect()](https://sendbird.com/docs/chat/v4/android/application/authenticating-a-user/authentication#2-connect-to-the-sendbird-server-with-a-user-id).
+```kotlin
+SendbirdChat.connect(userId) { user, e ->
+    if (user != null) {
+        // onConnected
+    } else {
+        // Handle error.
+    }
+}
+```
+
 ### **Improvements**
+- Added `SendbirdChat.isInitialized` which indicates whether the SDK is initialized or not
+  - If the SDK is initialized with `InitParams.useCaching` is set to true, this will be true only after the asynchronous `InitResultHandler.onInitSucceed()` is called
 - Fixed bug where `Poll.votedPollOptionIds` is not properly updated when a poll option is deleted
 - Added default arguments for following functions. You can now call these functions without the `Params` arguments
   - `BaseChannel.getMessageChangeLogsSinceTimestamp`
