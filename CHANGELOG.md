@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.4.1 (Feb 24, 2023)
+
+### **Improvements**
+- Fixed a bug where `SendbirdChat.markAsDelivered()` fails when it's called on receiving a push notification when the app is in killed state.
+
 ## v4.4.0 (Feb 15, 2023)
 
 ### **Features**
