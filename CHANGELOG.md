@@ -1,5 +1,54 @@
 # Changelog
 
+## v4.5.0 (Mar 03, 2023)
+
+### **Features**
+### **Encrypting Local Caching**
+Locally saved chats in your user's device can now be encrypted using [SQLCipher](https://www.zetetic.net/sqlcipher/), a popular database encryption library.
+As for exact how-to, please refer to below guide and API Reference.
+
+#### Disclaimer
+Note that this is an external 3rd party library and is not endorsed by Sendbird. The client must bring their own SQLCipher license and manage their encryption key
+
+#### Brief guide
+1. You must declare SQLCipher dependencies to use the encryption feature. Please refer [SQLCipher's documentation](https://www.zetetic.net/sqlcipher/sqlcipher-for-android/) to see how you can declare the SQLCipher dependencies.
+2. Create `InitParams` and then set `LocalCacheConfig` and `SqlcipherConfig`. These options are turned off by default, so you don't have to set anything up if you don't intend to use them.
+```
+InitParams(APP_ID, Context, useCaching = true).apply { 
+    localCacheConfig = LocalCacheConfig().apply { 
+        sqlCipherConfig = SqlcipherConfig(ENCRYPTION_KEY)
+    }
+}
+```
+3. Call SendbirdChat.init with the `InitParams`
+
+#### Specification
+- `InitParams.localCacheConfig`
+- `LocalCacheConfig.sqlcipherConfig`
+- `SqlcipherConfig(password, licenseCode)`
+
+### **Polls in Open Channel**
+Polls is now supported in both Open Channels and Group Channels!
+
+#### **Specification**
+- Added `onPollUpdated`, `onPollVoted`, and `onPollDeleted` in `OpenChannelHandlerParams`
+- Moved following methods from `GroupChannel` to `BaseChannel`:
+    - `updatePoll()`
+    - `deletePoll()`
+    - `closePoll()`
+    - `addPollOption()`
+    - `updatePollOption()`
+    - `deletePollOption()`
+    - `votePoll()`
+    - `getPollChangeLogsSinceTimestamp()`
+    - `getPollChangeLogsSinceToken()`
+    - `createPollListQuery()`
+    - `createPollVoterListQuery()`
+
+### **Improvements**
+- Fixed a bug where `GroupChannelFilter` using nicknames (`nicknameContainsFilter`, `nicknameExactMatchFilter`, and `nicknameExactMatchFilter`) includes current user's nickname when searching from locally cached group channels.
+- Fixed `ConcurrentModificationException` from `GroupChannelCollection.channelList`
+
 ## v4.4.1 (Feb 24, 2023)
 
 ### **Improvements**
