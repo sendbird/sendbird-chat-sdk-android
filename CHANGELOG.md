@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.6.1 (Mar 31, 2023)
+
+### **Improvements**
+
+- Added OpenChannelCreateParams.isEphemeral
+- Fixed an issue where network wouldn't properly reconnect when `connect()` is called again with a different user id
+- Fixed potential ANR from `SendbirdChat.init()`
+
 ## v4.6.0 (Mar 14, 2023)
 
 ### **Features**
