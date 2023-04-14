@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.7.0 (Apr 14, 2023)
+
+### **Features**
+### (Moderation) Automatically detect when user is unmuted
+You can now automatically detect when a muted user is unmuted by leveraging `MessageCollection`.
+Clients will now receive `MessageCollectionHandler.onChannelUpdated()` with `GroupChannelContext.CollectionEventSource.EVENT_USER_UNMUTED` when an user is unmuted after their muted duration has expired, on top of explict unmute calls. This now means that you can easily transition user’s experience and allow them to chat even more seamlessly.
+Note that this is a MessageCollections only feature! We recommend all of our clients to give it a try if you haven’t : ) 
+
 ## v4.6.1 (Mar 31, 2023)
 
 ### **Improvements**
