@@ -1,5 +1,31 @@
 # Changelog
 
+## v4.8.0 (Apr 28, 2023)
+
+### **Features**
+### PinnedMessageListQuery
+You can now retrieve all pinned messages within a GroupChannel by the `PinnedMessageListQuery`.
+
+- Added `PinnedMessage`
+- Added `PinnedMessageListQuery`, `PinnedMessageListQueryParams`
+- Added `SendbirdChat.createPinnedMessageListQuery`
+
+```
+val params = PinnedMessageListQueryParams(channel.channelType, channel.url)
+val query = SendbirdChat.createPinnedMessageListQuery(params)
+query.next { pinnedMessages, e ->
+    // handle result
+}
+```
+
+### Improvements
+- Fixed possible ANR in `GroupChannelCollection.dispose()`
+
+### Deprecation
+pendingPushToken is deprecated. Retrieve most recent token through the push library instead.
+- `SendbirdChat.pendingPushToken`
+- `SendbirdChat.HMS.pendingPushToken`
+
 ## v4.7.0 (Apr 14, 2023)
 
 ### **Features**
