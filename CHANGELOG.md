@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.8.1 (May 12, 2023)
+
+### Improvements
+- Fixed a crash from SendbirdChat.init caused by android.net.ConnectivityManager$TooManyRequestsException
+- Fixed an issue that ConnectHandler.onConnected is not called sometimes when the app is in offline
+- Supports 'includeParentInfo' for the PinnedMessageListQuery
+
 ## v4.8.0 (Apr 28, 2023)
 
 ### **Features**
