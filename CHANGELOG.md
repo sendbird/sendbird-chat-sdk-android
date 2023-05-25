@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.8.3 (May 25, 2023)
+
+### Improvements
+- Fixed SendbirdChat.Connect callback not being called when Sendbird.connect and GroupChannel.GetChannel are called simultaneously
+- Improved speed of initialization to reduce initialization timeout
+
 ## v4.8.2 (May 17, 2023)
 
 ### Improvements
