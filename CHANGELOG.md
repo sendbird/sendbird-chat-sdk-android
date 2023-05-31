@@ -1,5 +1,34 @@
 # Changelog
 
+## v4.9.0 (May 31, 2023)
+
+### **Features**
+### MultipleFilesMessage
+You can send a `MultipleFilesMessage` that contains multiple files in a single message via `GroupChannel.sendMultileFilesMessage()` 
+- Added `MultipleFilesMessage`.
+- Added `GroupChannel.sendMultipleFilesMessage`, `MultipleFilesMessageCreateParams`, `UploadableFileInfo` and `UploadedFileInfo`.
+- Added `MultipleFilesMessageHandler` and `FileUploadhandler`. 
+- Added `SendbirdChat.multipleFilesMessageFileCountLimit` that indicates the maximum count of files that can be included in a single message.
+
+```kotlin
+val params = MultipleFilesMessageCreateParams(
+    listOf(
+        UploadableFileInfo(file),
+        UploadableFileInfo(fileUrl)
+    )
+)
+
+channel.sendMultipleFilesMessage(
+    params,
+    fileUploadHandler = { requestId, index, uploadableFileInfo, e ->
+        // handle the upload result of each UploadableFileInfo. 
+    },
+    multipleFilesMessageHandler = { message, e ->
+        // handle the result of sending MultipleFilesMessage.
+    }
+)
+```
+
 ## v4.8.3 (May 25, 2023)
 
 ### Improvements
