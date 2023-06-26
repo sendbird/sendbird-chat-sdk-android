@@ -1,5 +1,16 @@
 # Changelog
 
+## v4.9.1 (Jun 26, 2023)
+
+### Improvements
+
+- Fixed a security flaw related to the connection
+- Fixed a crash that occurred when sqlcipher was used alongside proguard.
+- Fixed a randomly occurring ConcurrentModificationException.
+- Introduced new error codes to streamline error handling:
+    - SendbirdError.ERR_INITIALIZATION_CANCELED: Triggered when SDK initialization exceeds 5 seconds to prevent App Not Responding (ANR) incidents.
+    - SendbirdError.ERR_DATABASE_ERROR_ENCRYPTION: Related to issues with sqlcipher, such as an undeclared sqlcipher dependency or an incorrect encryption key.
+
 ## v4.9.0 (May 31, 2023)
 
 ### **Features**
