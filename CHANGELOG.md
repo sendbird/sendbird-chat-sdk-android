@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.9.2 (Jul 05, 2023)
+
+### Improvements
+
+- Fixed the bug where the notification-related stats disappear when the app is restarted.
 ## v4.9.1 (Jun 26, 2023)
 
 ### Improvements
