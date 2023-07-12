@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.9.3 (Jul 12, 2023)
+
+### Improvements
+
+- Fixed a bug that MessageCollection.onMessageAdded is not called for a pending message of FileMessage or MultipleFileMessage
 ## v4.9.2 (Jul 05, 2023)
 
 ### Improvements
