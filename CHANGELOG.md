@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.9.5 (Jul 21, 2023)
+
+### Improvements
+- Fixed a bug where the group channel changelogs did not update the group channel metadata
+- Fixed a bug where the changes of the *chat history setting were not reflected properly when the local cache is turned on.  
+
+*(Chat history setting can be found in Dashboard page - Settings - Channels - Chat history)
+
 ## v4.9.4 (Jul 12, 2023)
 
 ### Improvements
