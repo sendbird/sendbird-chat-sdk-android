@@ -1,5 +1,34 @@
 # Changelog
 
+## v4.11.0 (Aug 16, 2023)
+
+### Features
+
+- Added 'SendbirdChat.authenticateFeed' for Sendbird Notifications
+- Added 'SendbirdChat.refreshNotificationCollections' for Sendbird Notifications
+
+### Improvements
+
+- Added `createdBefore` and `createdAfter` in listing `GroupChannels`.
+```kotlin
+class GroupChannelListQueryParams {
+    var createdBefore: Long? = null
+    var createdAfter: Long? = null
+}
+class GroupChannelListQuery {
+    val createdBefore: Long? = params.createdBefore
+    val createdAfter: Long? = params.createdAfter
+}
+class PublicGroupChannelListQueryParams {
+    var createdBefore: Long? = null
+    var createdAfter: Long? = null
+}
+class PublicGroupChannelListQuery {
+    val createdBefore: Long? = params.createdBefore
+    val createdAfter: Long? = params.createdAfter
+}
+```
+
 ## v4.10.0 (Aug 2, 2023)
 
 ### **Features**
