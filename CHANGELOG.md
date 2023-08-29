@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.11.1 (Aug 29, 2023)
+### **Improvements**
+
+- Added `enableAutoResend` in `InitParams.LocalCacheConfig` to control auto-resending feature when local cache is enabled
+- Added `isBot` in `Sender`
+- Added `file`, `url` getters in `UploadableFileInfo`
+- Mitigated an ANR issue and a failure of initialization by reducing access to SharedPreferences in the main thread
 ## v4.11.0 (Aug 16, 2023)
 
 ### Features
