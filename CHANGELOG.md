@@ -1,5 +1,21 @@
 # Changelog
 
+## v4.12.0 (Sep 04, 2023)
+### Features
+
+You can get the categories of a set FeedChannel and the channel's properties from the Dashboard.
+- Added `isCategoryFilterEnabled`, `isTemplateLabelEnabled`, and `notificationCategories` in FeedChannel
+```kotlin
+var isCategoryFilterEnabled: Boolean
+var isTemplateLabelEnabled: Boolean
+var notificationCategories: List<NotificationCategory>
+```
+
+You can obtain the data that you set when you send Notification to the template that you created in the dashboard.
+- Added `notificationData` in `BaseMessage`
+```kotlin
+val notificationData: NotificationData?
+```
 ## v4.11.1 (Aug 29, 2023)
 ### **Improvements**
 
