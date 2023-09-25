@@ -6,7 +6,9 @@
 - Added `BaseMessage.submitForm(String, Map<String, String>, CompletionHandler?)`, which allows you to submit form messages sent by the bot. Please note that form messages are delivered via BaseMessage.extendedMessages when all settings are properly configured on the server.
 
 ### Improvements
-- Fixed occasional `NoSuchElementException` when accessing `GroupChannel.members`.## v4.12.1 (Sep 13, 2023)
+- Fixed occasional `NoSuchElementException` when accessing `GroupChannel.members`.
+
+## v4.12.1 (Sep 13, 2023)
 ### Improvements
 
 - Improved stability.
