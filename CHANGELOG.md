@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.12.3 (Oct 06, 2023)
+### Improvements
+- Reduced delay in `GroupChannelCollection.loadMore()` when there's lots of channels
 ## v4.12.2 (Sep 25, 2023)
 ### Features
 - Added `GroupChannel.getDeliveryStatus(Boolean): Map<String, DeliveryStatus>` to get delivery status of all members.
