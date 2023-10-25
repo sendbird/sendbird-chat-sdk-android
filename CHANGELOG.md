@@ -1,5 +1,44 @@
 # Changelog
 
+## v4.13.0 (Oct 25, 2023)
+### Features
+- Added new read-only attribute `messageReviewInfo` in `UserMessage`
+
+    ```kotlin
+    class UserMessage {
+        // exist only if the message is in review or it has been approved
+        val messageReviewInfo: MessageReviewInfo?
+    }
+
+    class MessageReviewInfo {
+        val status: MessageReviewStatus
+        val originalMessageInfo: OriginalMessageInfo? // (exist only if the status is approved)
+    }
+
+    enum class MessageReviewStatus {
+        IN_REVIEW, APPROVED
+    }
+
+    class OriginalMessageInfo {
+        val createdAt: Long
+        val messageId: Long
+    }
+    ```
+- Added new read-only attribute `notificationMessageStatus` in `BaseMessage`
+- Added `markAsRead(List<BaseMessage>, CompletionHandler?)` in `FeedChannel`
+- Added `logImpression(List<BaseMessage>)` in `FeedChannel`
+    ```kotlin
+    class BaseMessage {
+        // This value represents the status value for the Notification message. The value `NONE` is returned for messages that are not Notification messages.
+        val notificationMessageStatus: NotificationMessageStatus
+    }
+
+    enum class NotificationMessageStatus(val value: String) {
+        NONE, SENT, READ
+    }
+
+### Improvements
+- Mitigated an ANR issue by lazy creation of properties within `SendbirdChat.init()`
 ## v4.12.3 (Oct 06, 2023)
 ### Improvements
 - Reduced delay in `GroupChannelCollection.loadMore()` when there's lots of channels
