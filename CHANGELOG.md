@@ -1,5 +1,121 @@
 # Changelog
 
+## v4.14.0 (Dec 20, 2023)
+### Features
+- Three new features related to Generative AI have been added: Form type, Suggested replies and Feedback.
+  - Form type: A form type message is a message that contains a form. A form is a set of questions that a user can answer to collect data from users.
+    1. How to determine if a message is a form type message:
+        ```kotlin
+        val BaseMessage.isFormTypeMessage: Boolean
+            get() = this.forms.isNotEmpty()
+        ```
+    2. How to save the answer in the SDK when the user enters input:
+        ```kotlin
+        editText.addTextChangedListener(
+            object : TextWatcher {
+                ...
+                override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                    formField.temporaryAnswer = Answer(formField.key, s.toString())
+                }
+            }
+        )
+       ```
+    3. Submits a form
+        ```kotlin
+        // submits form
+        message.submitForm(form) { e ->
+            if (e != null) {
+                // handle error
+            }
+        }
+
+        // The submitted form is updated through a message update event.
+        SendbirdChat.addChannelHandler(
+            "IDENTIFIER",
+            object : GroupChannelHandler() {
+            ...
+                override fun onMessageUpdated(channel: BaseChannel, message: BaseMessage) {
+                    message.forms.find { it.formKey == "TARGET_FORM_KEY" }?.isSubmitted // should be true
+                    // update message UI to submitted form
+                }
+            }
+        )
+       ```
+  - Suggested replies: Suggested reply is a set of items that a user can click quickly to send a message. Suggested replies is contained in a last message.
+    ```kotlin
+    SendbirdChat.addChannelHandler(
+        "IDENTIFIER",
+        object : GroupChannelHandler() {
+            ...
+            override fun onChannelChanged(channel: BaseChannel) {
+                if (channel is GroupChannel) {
+                    val suggestedReplies = channel.lastMessage?.suggestedReplies
+                    if (!suggestedReplies.isNullOrEmpty()) {
+                        // draw suggested replies for the channel's last message
+                    }
+                }
+            }
+        }
+    )
+    ```
+  - Feedback: Feedback is a feature that allows users to provide their satisfaction or dissatisfaction with the bot's responses.
+    1. How to draw feedback UI
+        ```kotlin
+        val feedback = message.myFeedback
+        when (message.myFeedbackStatus) {
+            FeedbackStatus.NOT_APPLICABLE -> {
+                // this message is not applicable for feedback
+                // Make thumbs-up/down UI invisible or disable here
+                // `feedback` should be null
+            }
+
+            FeedbackStatus.NO_FEEDBACK -> {
+                // The feedback is not submitted yet but user can submit feedback
+                // Make thumbs-up/down UI visible or enable without being selected
+                // `feedback` should be null
+            }
+            FeedbackStatus.SUBMITTED -> {
+                // The feedback is submitted
+                // Make thumbs-up/down UI visible or enable as selected
+                // `feedback` should not be null
+            }
+        }
+        ```
+    2. How to submit / update / delete feedback
+        ```kotlin
+        // submit feedback
+        message.submitFeedback(FeedbackRating.Good) { feedback, e ->
+            when {
+                feedback != null -> {
+                    // update feedback UI
+                }
+                e != null -> {
+                    // handle error
+                }
+            }
+        }
+
+        // update feedback
+        message.updateFeedback(FeedbackRating.Good, "Very good response") { feedback, e ->
+            when {
+                feedback != null -> {
+                    // update feedback UI
+                }
+                e != null -> {
+                    // handle error
+                }
+            }
+        }
+
+        // delete feedback
+        message.deleteFeedback { e ->
+            // handle error
+        }
+        ```
+- Introduced `BaseMessage.extras` to enable developers to include their own data in `BaseMessage` and carry it seamlessly.
+- Added `logCustom(String, List<BaseMessage>)` in `FeedChannel`.
+### Improvements
+- Fix the bug where the internal network status flag is incorrect when an app starts from offline mode.
 ## v4.13.0 (Oct 25, 2023)
 ### Features
 - Added new read-only attribute `messageReviewInfo` in `UserMessage`
