@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.14.1 (Jan 17, 2024)
+### Improvements
+- Fix intermittent `ConcurrentModificationException` in `MessageCollection`
 ## v4.14.0 (Dec 20, 2023)
 ### Features
 - Three new features related to Generative AI have been added: Form type, Suggested replies and Feedback.
