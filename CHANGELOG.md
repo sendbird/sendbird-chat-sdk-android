@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.14.2 (Jan 31, 2024)
+### Improvements
+- Fixed a bug where `NotificationCollectionHandler.onMessagesUpdated()` is called indefinitely in some cases
 ## v4.14.1 (Jan 17, 2024)
 ### Improvements
 - Fix intermittent `ConcurrentModificationException` in `MessageCollection`
