@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.15.0 (Feb 07, 2024)
+### Features
+- Supports new SendbirdChat KTX
 ## v4.14.2 (Jan 31, 2024)
 ### Improvements
 - Fixed a bug where `NotificationCollectionHandler.onMessagesUpdated()` is called indefinitely in some cases
