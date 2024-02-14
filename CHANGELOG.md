@@ -6,10 +6,7 @@
 - Added new property `notificationPriority` in BaseMessage
 - Fixed a bug where `MessageMetaArray` related operation doesn't work with `MultipleFilesMessage`
 ## v4.15.1 (Feb 14, 2024)
-### Improvements
-- Reduced SDK Size by optimizing kotlin function usage
-- Added new property `notificationPriority` in BaseMessage
-- Fixed a bug where `MessageMetaArray` related operation doesn't work with `MultipleFilesMessage`
+- The SDK version 4.15.1 has been deprecated because it has been released by mistake. DO NOT USE THIS VERSION.
 ## v4.15.0 (Feb 07, 2024)
 ### Features
 - Supports new SendbirdChat KTX
