@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.15.2 (Feb 14, 2024)
+### Improvements
+- Reduced SDK Size by optimizing kotlin function usage
+- Added new property `notificationPriority` in BaseMessage
+- Fixed a bug where `MessageMetaArray` related operation doesn't work with `MultipleFilesMessage`
 ## v4.15.1 (Feb 14, 2024)
 ### Improvements
 - Reduced SDK Size by optimizing kotlin function usage
