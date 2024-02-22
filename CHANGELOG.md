@@ -1,5 +1,28 @@
 # Changelog
 
+## v4.15.3 (Feb 22, 2024)
+### Features
+- Added `ThreadedParentMessageListQuery`
+```kotlin
+class GroupChannel {
+	val totalUnreadReplyCount: Int
+
+	fun createThreadedParentMessageListQuery(
+		params: ThreadedParentMessageListQueryParams
+	): ThreadedParentMessageListQuery
+}
+
+class BaseMessage {
+	fun markThreadAsRead(handler: CompletionHandler?)
+	fun setPushNotificationEnabled(enabled: Boolean, handler: ThreadMessagePushHandler?)
+}
+
+class ThreadInfo {
+	val unreadReplyCount: Int
+	val memberCount: Int
+	val isPushNotificationEnabled: Boolean
+}
+```
 ## v4.15.2 (Feb 14, 2024)
 ### Improvements
 - Reduced SDK Size by optimizing kotlin function usage
