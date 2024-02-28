@@ -1,5 +1,29 @@
 # Changelog
 
+## v4.15.2 (Feb 28, 2024)
+### Features
+- Added new Kotlin Extension for SendbirdChat SDK
+   ```kotlin
+    class User {
+        suspend fun createMetaData(metaDataMap: Map<String, String>): Map<String, String>
+        suspend fun updateMetaData(metaDataMap: Map<String, String>): Map<String, String>
+        suspend fun deleteMetaData(key: String)
+        suspend fun deleteAllMetaData()
+    }
+
+    class Poll {
+        companion object {
+            suspend fun create(params: PollCreateParams): Poll
+            suspend fun get(params: PollRetrievalParams): Poll
+        }
+    }
+
+    class PollOption {
+        companion object {
+            suspend fun get(params: PollOptionRetrievalParams): PollOption
+        }
+    }
+    ```
 ## v4.15.1 (Feb 22, 2024)
 ### Features
 - Added extension function in `BaseMessage` related to threaded message
