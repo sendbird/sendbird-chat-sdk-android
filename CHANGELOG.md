@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.15.5 (Mar 07, 2024)
+### Removed Features
+- Removed `ThreadedParentMessageListQuery` and related interfaces released in `v4.15.4`
 ## v4.15.4 (Feb 28, 2024)
 ### Features
 - Added `ThreadedParentMessageListQuery`
