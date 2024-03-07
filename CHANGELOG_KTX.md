@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.15.3 (Mar 07, 2024)
+### Removed Features
+- Removed extension function in `BaseMessage` related to threaded message released in `v4.15.2`
 ## v4.15.2 (Feb 28, 2024)
 ### Features
 - Added new Kotlin Extension for SendbirdChat SDK
