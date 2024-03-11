@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.15.6 (Mar 11, 2024)
+### Improvements
+- Fixed `DateTimeException` occurring from `SendbirdChat.init()` in some devices
 ## v4.15.5 (Mar 07, 2024)
 ### Removed Features
 - Removed `ThreadedParentMessageListQuery` and related interfaces released in `v4.15.4`

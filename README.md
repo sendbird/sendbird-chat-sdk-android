@@ -90,7 +90,7 @@ Then, add the dependency to the project's top-level `build.gradle` file:
 ```gradle
 dependencies {
     ...
-    implementation 'com.sendbird.sdk:sendbird-chat:4.15.5'
+    implementation 'com.sendbird.sdk:sendbird-chat:4.15.6'
     ...
 }
 ```
@@ -103,7 +103,7 @@ TLS 1.3 is enabled by default in Sendbird SDK for Android. To disable it, please
 
 ```gradle
 dependencies {
-    implementation ('com.sendbird.sdk:sendbird-chat:4.15.5') {
+    implementation ('com.sendbird.sdk:sendbird-chat:4.15.6') {
         exclude group: 'org.conscrypt', module: 'conscrypt-android'
     }
 }
