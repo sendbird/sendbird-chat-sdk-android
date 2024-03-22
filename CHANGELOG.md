@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.15.7 (Mar 22, 2024)
+### Improvements
+- Added `EventDetail` in `GroupChannelContext`/`FeedChannelContext` to hold detailed information of channel events
+    - i.e. Getting an inviter/invitees information when a channel has been added from receiving an invitation:
+         ```kotlin
+         override fun onChannelsAdded(context: GroupChannelContext, channels: List<GroupChannel>) {
+             if (context.eventDetail is EventDetail.OnUserReceivedInvitation) {
+                 val inviter: User? = context.eventDetail.inviter
+                 val invitees: List<User> = context.eventDetail.invitees
+             }
+         }
+         ```
 ## v4.15.6 (Mar 11, 2024)
 ### Improvements
 - Fixed `DateTimeException` occurring from `SendbirdChat.init()` in some devices
