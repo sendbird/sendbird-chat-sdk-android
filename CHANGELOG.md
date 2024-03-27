@@ -1,5 +1,23 @@
 # Changelog
 
+## v4.16.0 (Mar 27, 2024)
+### Features
+You can mark push notifications as clicked within the SDK, tracking the push notification clicked rate.
+- Added `markPushNotificationAsClicked(Map<String, String>, CompletionHandler)` in `SendbirdPushHelper`
+  ```kotlin
+  SendbirdPushHelper.markPushNotificationAsClicked(pushData)
+  ```
+
+- Added `logViewed(List<BaseMessage>)`, `logClicked(BaseMessage)` in `FeedChannel`
+- Deprecated `logImpression(List<BaseMessage>)` in `FeedChannel`
+
+
+Added `MessageTemplate` feature for UIKit to render messages with templates.
+  - Added `messageTemplateInfo` property to `AppInfo`.
+  - Added `SendbirdChat.getMessageTemplate(String, MessageTemplateHandler?)`.
+  - Added `SendbirdChat.getMessageTemplatesByToken(String, MessageTemplateParams(), MessageTemplatesResultHandler?)`.
+  - Added `MessageTemplateHandler` and `MessageTemplatesResultHandler`.
+  - Added models for message templates, `MessageTemplate`, `MessageTemplateInfo`, `MessageTemplatesResult` and `MessageTemplateListParams`.
 ## v4.15.7 (Mar 22, 2024)
 ### Improvements
 - Added `EventDetail` in `GroupChannelContext`/`FeedChannelContext` to hold detailed information of channel events
