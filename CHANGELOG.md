@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.16.1 (Apr 12, 2024)
+### Improvements
+- Improved stability.
 ## v4.16.0 (Mar 27, 2024)
 ### Features
 You can mark push notifications as clicked within the SDK, tracking the push notification clicked rate.
