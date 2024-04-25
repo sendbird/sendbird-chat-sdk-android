@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.16.2 (Apr 25, 2024)
+### Improvements
+- Improved `SendbirdChat.init()` to prevent possible ANR during the init process
 ## v4.16.1 (Apr 12, 2024)
 ### Improvements
 - Improved stability.
