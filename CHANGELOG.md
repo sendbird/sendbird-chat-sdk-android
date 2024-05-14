@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.16.3 (May 14, 2024)
+### Improvements
+- Fixed an occasional `ConcurrentModificationException` crash from `reconnect()`
 ## v4.16.2 (Apr 25, 2024)
 ### Improvements
 - Improved `SendbirdChat.init()` to prevent possible ANR during the init process
