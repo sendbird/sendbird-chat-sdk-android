@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.16.4 (Jun 05, 2024)
+### Improvements
+- Added new properties `hasAiBot` and `hasBot` to `GroupChannel`
 ## v4.16.3 (May 14, 2024)
 ### Improvements
 - Fixed an occasional `ConcurrentModificationException` crash from `reconnect()`
