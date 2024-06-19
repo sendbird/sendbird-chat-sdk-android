@@ -11,6 +11,7 @@
 1.  [Requirements](#requirements)
 1.  [Getting started](#getting-started)
 1.  [Sending your first message](#sending-your-first-message)
+1.  [Size of Chat SDK](#size-of-chat-sdk)
 1.  [Hiring](#we-are-hiring)
 
 <br />
@@ -121,7 +122,7 @@ The Chat SDK requires system permissions, which allow for communication with Sen
 
 ### (Optional) Configure ProGuard to shrink code and resources
 
-When you build your APK with `minifyEnabled true`, add the following line to the module's `ProGuard` rules file.
+When you build your APK with ```minifyEnabled true`, add the following line to the module's `ProGuard` rules file.
 
 ```txt
 -dontwarn com.sendbird.android.shadow.**
@@ -240,6 +241,13 @@ openChannel.sendUserMessage(MESSAGE) { message, e ->
 ```
 
 <br />
+
+## Size of Chat SDK
+
+The size of the Chat SDK is an important factor to consider when integrating it into your app. The size of the Chat SDK is as follows:
+
+- **SDK size**: 1.4 MB
+- **Minified SDK size**: 1.1 MB
 
 ## We are hiring
 
