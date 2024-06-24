@@ -122,7 +122,7 @@ The Chat SDK requires system permissions, which allow for communication with Sen
 
 ### (Optional) Configure ProGuard to shrink code and resources
 
-When you build your APK with ```minifyEnabled true`, add the following line to the module's `ProGuard` rules file.
+When you build your APK with `minifyEnabled true`, add the following line to the module's `ProGuard` rules file.
 
 ```txt
 -dontwarn com.sendbird.android.shadow.**
