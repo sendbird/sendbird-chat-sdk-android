@@ -11,6 +11,7 @@
 1.  [Requirements](#requirements)
 1.  [Getting started](#getting-started)
 1.  [Sending your first message](#sending-your-first-message)
+1.  [Size of Chat SDK](#size-of-chat-sdk)
 1.  [Hiring](#we-are-hiring)
 
 <br />
@@ -240,6 +241,13 @@ openChannel.sendUserMessage(MESSAGE) { message, e ->
 ```
 
 <br />
+
+## Size of Chat SDK
+
+The size of the Chat SDK is an important factor to consider when integrating it into your app. The size of the Chat SDK is as follows:
+
+- **SDK size**: 1.4 MB
+- **Minified SDK size**: 1.1 MB
 
 ## We are hiring
 
