@@ -1,5 +1,18 @@
 # Changelog
 
+## v4.17.0 (Jul 18, 2024)
+### Features
+- Added `SendbirdChat.authenticate()` for authentication
+    - Deprecated `SendbirdChat.authenticateFeed()`
+- Added `SendbirdChat.getTotalUnreadNotificationCount()` to get the total unread notification count of a user
+
+### Improvements
+- Added `SendbirdPushHelper.registerHandler()`
+    - Deprecated `SendbirdPushHelper.registerPushHandler()`
+- Added `SendbirdPushHelper.unregisterHandler(Boolean, PushRequestCompleteHandler?)`
+    - Deprecated `SendbirdPushHelper.unregisterPushHandler(PushRequestCompleteHandler?)`
+    - Deprecated `SendbirdPushHelper.unregisterPushHandler(Boolean, PushRequestCompleteHandler?)`
+- Added `collectionLifecycle` in `GroupChannelCollection`, `MessageCollection` and `NotificationCollection`
 ## v4.16.4 (Jun 05, 2024)
 ### Improvements
 - Added new properties `hasAiBot` and `hasBot` to `GroupChannel`
