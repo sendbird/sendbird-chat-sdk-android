@@ -1,6 +1,14 @@
 # Changelog
 
-## v4.17.0 (Jul 18, 2024)
+## v4.18.0 (Aug 07, 2024)
+### Features
+Support `pinned message` in `OpenChannel`
+- Added `pinnedMessageIds` property to `BaseChannel`
+- Added `lastPinnedMessage` property to `BaseChannel`
+- Added `pinMessage` method to `BaseChannel`
+- Added `unpinMessage` method to `BaseChannel`
+- Added `onPinnedMessageUpdated` to `OpenChannelHandler`
+- Expanded `SendbirdChat.createPinnedMessageListQuery` to use in `OpenChannel`## v4.17.0 (Jul 18, 2024)
 ### Features
 - Added `SendbirdChat.authenticate()` for authentication
     - Deprecated `SendbirdChat.authenticateFeed()`
