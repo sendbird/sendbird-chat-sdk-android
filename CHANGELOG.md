@@ -8,7 +8,8 @@ Support `pinned message` in `OpenChannel`
 - Added `pinMessage` method to `BaseChannel`
 - Added `unpinMessage` method to `BaseChannel`
 - Added `onPinnedMessageUpdated` to `OpenChannelHandler`
-- Expanded `SendbirdChat.createPinnedMessageListQuery` to use in `OpenChannel`## v4.17.0 (Jul 18, 2024)
+- Expanded `SendbirdChat.createPinnedMessageListQuery` to use in `OpenChannel`
+## v4.17.0 (Jul 18, 2024)
 ### Features
 - Added `SendbirdChat.authenticate()` for authentication
     - Deprecated `SendbirdChat.authenticateFeed()`
