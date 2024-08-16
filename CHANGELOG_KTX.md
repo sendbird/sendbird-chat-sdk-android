@@ -27,7 +27,8 @@
 - Added `SendbirdChat.awaitGetTotalUnreadNotificationCount()`
 ## v4.16.1 (Apr 12, 2024)
 ### Improvements
-- Added `suspend fun` for Chat SDK's `Query` classes## v4.16.0 (Mar 27, 2024)
+- Added `suspend fun` for Chat SDK's `Query` classes
+## v4.16.0 (Mar 27, 2024)
 ### Features
 Added `MessageTemplate` feature for UIKit to render messages with templates.
   - Added suspend function `SendbirdChat.getMessageTemplate(String): MessageTemplate` and `SendbirdChat.getMessageTemplatesByToken(String?, MessageTemplateListParams): MessageTemplatesResult`
