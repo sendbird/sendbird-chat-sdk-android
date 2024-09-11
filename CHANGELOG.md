@@ -1,5 +1,27 @@
 # Changelog
 
+## v4.19.0 (Sep 11, 2024)
+### Features
+- Added interfaces for `MessageForm` to work with Sendbird dashboard and `Form` interfaces have been deprecated.
+    - Added `submitMessageForm(CompletionHandler?)` method in `BaseMessage` class
+    - Added `messageForm` property in `BaseMessage` class
+    - Added `MessageForm` class
+    - Added `MessageFormItem` class
+    - Added `MessageFormItem.Style` class
+    - Added `MessageFormItem.LayoutType` enum
+    - Added `MessageFormItem.ResultCount` enum
+    - Deprecated `submitForm(Form, CompletionHandler)` method in `BaseMessage` class
+    - Deprecated `forms` property in `BaseMessage` class
+    - Deprecated `Form` class and interfaces
+    - Deprecated `FormField` class and interfaces
+    - Deprecated `FormFieldAnswer` class and interfaces
+- Added `TemplateContainerOptions` in `TemplateMessageData`
+- Added `SendbirdChat.getUnreadItemCount(GroupChannelUnreadItemCountParams, GroupChannelGetUnreadItemCountHandler?)` method to support filtering unread message count by custom types
+    - Added `GroupChannelUnreadItemCountParams` class
+    - Deprecated existing `SendbirdChat.getUnreadItemCount(Collection<UnreadItemKey>, GroupChannelGetUnreadItemCountHandler)` method
+
+### Improvements
+- Fixed an occasional `ConcurrentModificationException` crash from `BaseMessageCollection.getPendingMessages`.
 ## v4.18.0 (Aug 07, 2024)
 ### Features
 Support `pinned message` in `OpenChannel`
