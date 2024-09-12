@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.19.1 (Sep 12, 2024)
+### Improvements
+- Improved speed of `MessageCollection.initialize()` when there are lots of reply messages in the channel.
 ## v4.19.0 (Sep 11, 2024)
 ### Features
 - Added interfaces for `MessageForm` to work with Sendbird dashboard and `Form` interfaces have been deprecated.
