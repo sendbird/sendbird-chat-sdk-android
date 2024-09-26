@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.19.2 (Sep 26, 2024)
+### Improvements
+- Fixed a bug where non-operator's message affects the last message and the unread message count for exclusive channels
+- Fixed a bug where a channel gets unexpectedly unhidden upon receiving a new message.
+- Added `useDnsFallback` to `InitParams` which enables a fallback where a second DNS lookup is attempted using a public DNS when the initial lookup using the system DNS fails. Its default value is `false`.
 ## v4.19.1 (Sep 12, 2024)
 ### Improvements
 - Improved speed of `MessageCollection.initialize()` when there are lots of reply messages in the channel.
