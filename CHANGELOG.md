@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.19.3 (Oct 11, 2024)
+### Improvements
+- Fixed a crash issue due to lack of proguard rule for `PublicSuffixDatabase` in the okhttp library.
 ## v4.19.2 (Sep 26, 2024)
 ### Improvements
 - Fixed a bug where non-operator's message affects the last message and the unread message count for exclusive channels
