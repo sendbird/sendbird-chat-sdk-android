@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.19.4 (Oct 24, 2024)
+### Improvements
+- Improved speed of `GroupChannelCollection.loadMore()` when the `GroupChannelListQuery` is set with filters.
 ## v4.19.3 (Oct 11, 2024)
 ### Improvements
 - Fixed a crash issue due to lack of proguard rule for `PublicSuffixDatabase` in the okhttp library.
