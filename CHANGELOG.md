@@ -1,5 +1,20 @@
 # Changelog
 
+## v4.20.0 (Nov 07, 2024)
+### Features
+- Added new properties in `Reaction` to support more users
+``` kotlin
+class Reaction {
+    // A list of sampled userIds that have reacted to this Reaction.
+    val sampledUserIds: List<String>
+
+    // A count of the number of users who have reacted to this.
+    var count: Long
+
+    // A flag indicating whether the current user has reacted to this.
+    var hasCurrentUserReacted: Boolean
+}
+```
 ## v4.19.4 (Oct 24, 2024)
 ### Improvements
 - Improved speed of `GroupChannelCollection.loadMore()` when the `GroupChannelListQuery` is set with filters.
