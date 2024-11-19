@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.20.1 (Nov 19, 2024)
+### Improvements
+- Fixed a bug where `Reaction.count` resets to 0 when `Reaction.sampledUserIds` is empty
 ## v4.20.0 (Nov 07, 2024)
 ### Features
 - Added new properties in `Reaction` to support more users
