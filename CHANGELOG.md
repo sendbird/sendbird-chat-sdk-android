@@ -1,5 +1,33 @@
 # Changelog
 
+## v4.21.1 (Nov 21, 2024)
+### Features
+SDK now supports `Custom Report Categories` configured through Sendbird Dashboard, which takes effect after restarting the app. Previous report categories will remain until app restart.
+
+- Added `getReportCategoryInfoList()`
+- Added `ReportCategoryInfo`
+- Added `report(ReportCategoryInfo, String?, CompletionHandler?)` method in `BaseChannel`
+- Added `reportUser(User, ReportCategoryInfo, String?, CompletionHandler?)` method in `BaseChannel`
+- Added `reportMessage(BaseMessage, ReportCategoryInfo, String?, CompletionHandler?)` method in `BaseChannel`
+- Deprecated `ReportCategory`
+- Deprecated `report(ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
+- Deprecated `reportUser(User, ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
+- Deprecated `reportMessage(BaseMessage, ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
+
+``` kotlin
+val reportCategoryInfoList: List<ReportCategoryInfo> = SendbirdChat.getReportCategoryInfoList()
+...
+reportCategoryInfoList.forEach {
+	// make Report Category list
+	// use reportCategoryInfo
+}
+```
+
+### Improvements
+- Removed the `shadow plugin` and switched to referencing dependencies directly.
+    - The `shadow plugin` was previously used to relocate package names of dependencies to avoid conflicts and resolve dependency management issues.
+    - The affected libraries are `gson` and `okhttp`.
+    - This change was made because `okhttp` and `gson` are widely used in Android apps. Shadowing these libraries duplicates their code in the final app, increasing app size. By removing shadowing, we aim to help developers optimize performance and reduce storage requirements.
 ## v4.21.0 (Nov 21, 2024)
 ### Features
 SDK now supports `Custom Report Categories` configured through Sendbird Dashboard, which takes effect after restarting the app. Previous report categories will remain until app restart.
