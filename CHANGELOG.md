@@ -28,7 +28,8 @@ reportCategoryInfoList.forEach {
     - The `shadow plugin` was previously used to relocate package names of dependencies to avoid conflicts and resolve dependency management issues.
     - The affected libraries are `gson` and `okhttp`.
     - This change was made because `okhttp` and `gson` are widely used in Android apps. Shadowing these libraries duplicates their code in the final app, increasing app size. By removing shadowing, we aim to help developers optimize performance and reduce storage requirements.
-## v4.21.0 (Nov 21, 2024)
+
+## <strike>v4.21.0 (Nov 21, 2024)</strike> *DEPRECATED*
 ### Features
 SDK now supports `Custom Report Categories` configured through Sendbird Dashboard, which takes effect after restarting the app. Previous report categories will remain until app restart.
 
