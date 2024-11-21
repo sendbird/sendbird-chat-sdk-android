@@ -14,15 +14,6 @@ SDK now supports `Custom Report Categories` configured through Sendbird Dashboar
 - Deprecated `reportUser(User, ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
 - Deprecated `reportMessage(BaseMessage, ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
 
-``` kotlin
-val reportCategoryInfoList: List<ReportCategoryInfo> = SendbirdChat.getReportCategoryInfoList()
-...
-reportCategoryInfoList.forEach {
-	// make Report Category list
-	// use reportCategoryInfo
-}
-```
-
 ### Improvements
 - Removed the `shadow plugin` and switched to referencing dependencies directly.
     - The `shadow plugin` was previously used to relocate package names of dependencies to avoid conflicts and resolve dependency management issues.
@@ -42,15 +33,6 @@ SDK now supports `Custom Report Categories` configured through Sendbird Dashboar
 - Deprecated `report(ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
 - Deprecated `reportUser(User, ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
 - Deprecated `reportMessage(BaseMessage, ReportCategory, String?, CompletionHandler?)` method in `BaseChannel`
-
-``` kotlin
-val reportCategoryInfoList: List<ReportCategoryInfo> = SendbirdChat.getReportCategoryInfoList()
-...
-reportCategoryInfoList.forEach {
-	// make Report Category list
-	// use reportCategoryInfo
-}
-```
 
 ### Improvements
 - Removed the `shadow plugin` and switched to referencing dependencies directly.
