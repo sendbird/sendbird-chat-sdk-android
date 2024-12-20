@@ -1,5 +1,26 @@
 # Changelog
 
+## v4.22.0 (Dec 20, 2024)
+### Features
+
+- Supports for `Poll` feature is added for all message types.
+    - Added `poll` and `applyPoll(poll: Poll)` method in `BaseMessage`.
+    - Added `pollId` in `FileMessageCreateParams` and `MultipleFilesMessageCreateParams`.
+
+- Added `sampledReactedUserInfoList` in `Reaction` to support getting reaction-related data
+- Added `ReactedUserInfo`
+- Deprecated `sampledUserIds` in `Reaction`
+
+``` kotlin
+class Reaction {
+    val sampledReactedUserInfoList: List<ReactedUserInfo>
+}
+```
+
+### Improvements
+
+- Improved sender profile update in super group channel.
+- Fixed a bug where connecting fails with a user ID containing special characters.
 ## v4.21.1 (Nov 21, 2024)
 ### Features
 SDK now supports `Custom Report Categories` configured through Sendbird Dashboard, which takes effect after restarting the app. Previous report categories will remain until app restart.
