@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.23.0 (Dec 24, 2024)
+### Improvements
+
+- Performed internal modularization to enhance flexibility and stability.
 ## v4.22.0 (Dec 20, 2024)
 ### Features
 
