@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.23.1 (Jan 17, 2025)
+### Improvements
+
+- Fixed a bug where loading more group channels in a `GroupChannelCollection` with `includeEmpty` set to `true` did not work as expected.
 ## v4.23.0 (Dec 24, 2024)
 ### Improvements
 
