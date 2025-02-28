@@ -1,5 +1,24 @@
 # Changelog
 
+## v4.24.0 (Feb 28, 2025)
+### Features
+
+- Added `GroupChannel.messageDeletionTimestamp` representing the message deletion timestamp from the message archive.
+
+### Improvements
+
+- Fixed a duplicated module namespace warning.
+- Added `AuthTokenType`
+- Added authTokenType parameter to `authenticate()` (Default Value: AuthTokenType.SESSION_TOKEN)
+
+```kotlin
+// using AccessToken
+SendbirdChat.authenticate(userId: USER_ID, authToken: ACCESS_TOKEN, authTokenType: AuthTokenType.ACCESS_TOKEN)
+
+// using SessionToken
+SendbirdChat.authenticate(userId: USER_ID, authToken: SESSION_TOKEN)
+SendbirdChat.authenticate(userId: USER_ID, authToken: SESSION_TOKEN, authTokenType: AuthTokenType.SESSION_TOKEN)
+```
 ## v4.23.1 (Jan 17, 2025)
 ### Improvements
 
