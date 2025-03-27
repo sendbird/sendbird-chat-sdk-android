@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.24.1 (Mar 27, 2025)
+### Improvements
+Fixed a bug that parts of the local cache data were reset after calling `connect()` or `authenticate()`. This fix improves local cache performance and messages loading.
 ## v4.24.0 (Feb 28, 2025)
 ### Features
 
