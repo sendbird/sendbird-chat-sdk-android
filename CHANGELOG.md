@@ -1,6 +1,13 @@
 # Changelog
 
-## v4.24.2 (Apr 24, 2025)
+## v4.25.0 (May 09, 2025)
+### Improvements
+- The Chat SDK no longer includes `Conscrypt` by default. If your app targets Android 9 (Pie, API level 28) or lower and you want to enable TLS 1.3, you need to manually add the `Conscrypt` dependency as shown below. Android 10 and above natively support TLS 1.3, so this step is only necessary for older OS versions. Even if you don’t add the `Conscrypt` dependency, the SDK will still work using TLS 1.2 without any functional issues. Once the dependency is added, the SDK will automatically detect and use `Conscrypt`—no additional code is needed.
+```kotlin
+dependencies {
+    implementation("org.conscrypt:conscrypt-android:2.5.2")
+}
+```## v4.24.2 (Apr 24, 2025)
 ### Improvements
 - Fixed a bug where calling `GroupChannel.markAsRead()` too frequently within a short latency period caused ackTimeout error.
 ## v4.24.1 (Mar 27, 2025)
