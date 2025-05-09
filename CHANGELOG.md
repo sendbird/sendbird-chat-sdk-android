@@ -7,7 +7,9 @@
 dependencies {
     implementation("org.conscrypt:conscrypt-android:2.5.2")
 }
-```## v4.24.2 (Apr 24, 2025)
+```
+
+## v4.24.2 (Apr 24, 2025)
 ### Improvements
 - Fixed a bug where calling `GroupChannel.markAsRead()` too frequently within a short latency period caused ackTimeout error.
 ## v4.24.1 (Mar 27, 2025)
