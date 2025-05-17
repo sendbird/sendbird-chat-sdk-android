@@ -1,5 +1,65 @@
 # Changelog
 
+## v4.26.0 (May 17, 2025)
+### Feature
+- Added `markAsUnread(message: BaseMessage)` to `GroupChannel`. This new feature changes the read status of messages in the channel to `unread`, starting from the specified message.
+```kotlin
+groupChannel.markAsUnread(message, null)
+
+SendbirdChat.addChannelHandler(
+    UNIQUE_CHANNEL_HANDLER_ID,
+    object : GroupChannelHandler() {
+        override fun onMessageReceived(channel: BaseChannel, message: BaseMessage) {}
+
+        override fun onChannelChanged(channel: BaseChannel) {
+            // broadcast when the channel's read status changes
+        }
+
+        override fun onReadStatusUpdated(channel: GroupChannel) {
+            // broadcast when another member's read status in the channel changes
+        }
+    }
+)
+
+SendbirdChat.addUserEventHandler(
+    UNIQUE_USER_EVENT_HANDLER_ID,
+    object : UserEventHandler() {
+        override fun onFriendsDiscovered(users: List<User>) {
+        }
+
+        override fun onTotalUnreadMessageCountChanged(unreadMessageCount: UnreadMessageCount) {
+            // broadcast when the channel's total unread message count changes
+        }
+    }
+)
+```
+
+#### AI Agent support is now available natively in the Chat SDK 🎉
+You can now enhance your chat with smart AI-driven interactions without separate integration.
+Includes conversation list, message templates, CSAT, agent handoff, and more — fully embedded in the SDK.
+
+- **GroupChannel**
+    - Added `submitCSAT(params: CSATSubmitParams, handler: SubmitCSATHandler?)`: Submit a CSAT (Customer Satisfaction) rating for a conversation.
+    - Added `markConversationAsHandoff(handler: MarkConversationAsHandoffHandler?)`: Mark a conversation as handed off to a human agent.
+
+- **SendbirdChat.AIAgent**
+    - Added `requestMessengerSettings(params: MessengerSettingsParams, handler: MessengerSettingsHandler?)`: Fetch settings such as startup options and UI preferences for the AI agent.
+    - Added `createConversationListQuery(params: ConversationListQueryParams): ConversationListQuery`: Create a query to retrieve the user's AI agent conversation list.
+    - Added `getMessageTemplateList(params: AIAgentMessageTemplateListParams, handler: AIAgentMessageTemplatesResultHandler?)`: Fetch a list of available AI message templates for UI rendering.
+
+- **Etc**
+    - Added `AI_AGENT` enum value in `SendbirdProduct` for analytics.
+    - Added `custom-api-host` field in `InitParams` to allow using a custom API host endpoint.
+
+### Improvements
+
+- **FileMessage**
+    - Now supports sending both file and message simultaneously.
+```kotlin
+FileMessageCreateParams().apply {
+    message = "description of file"
+}
+```
 ## v4.25.0 (May 09, 2025)
 ### Improvements
 - The Chat SDK no longer includes `Conscrypt` by default. If your app targets Android 9 (Pie, API level 28) or lower and you want to enable TLS 1.3, you need to manually add the `Conscrypt` dependency as shown below. Android 10 and above natively support TLS 1.3, so this step is only necessary for older OS versions. Even if you don’t add the `Conscrypt` dependency, the SDK will still work using TLS 1.2 without any functional issues. Once the dependency is added, the SDK will automatically detect and use `Conscrypt`—no additional code is needed.
