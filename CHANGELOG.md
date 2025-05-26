@@ -1,5 +1,34 @@
 # Changelog
 
+## v4.27.0 (May 26, 2025)
+### Features
+
+- **AI Agent/Desk Channel Filtering**
+    - Added `AIAgentChannelFilter` and `DeskChannelFilter` enums to support filtering of AI Agent and Desk channels in GroupChannel queries (`INCLUDE`/`EXCLUDE` options).
+    - Added `aiAgentChannelFilter` and `deskChannelFilter` properties to `GroupChannelListQueryParams`, `GroupChannelListQuery`, and `GroupChannelChangeLogsParams`.
+    - Internal APIs and query logic were updated to consistently pass and apply these filters.
+
+- **New Channel Properties**
+    - Added `isAIAgent: Boolean` and `isDesk: Boolean` properties to `GroupChannel` to indicate whether a channel is an AI Agent or Desk channel.
+
+#### Example
+
+```kotlin
+// Example: Filtering AI Agent/Desk channels
+val params = GroupChannelListQueryParams().apply {
+    aiAgentChannelFilter = AIAgentChannelFilter.EXCLUDE
+    deskChannelFilter = DeskChannelFilter.EXCLUDE
+}
+val query = SendbirdChat.createGroupChannelListQuery(params)
+
+// Example: Using new properties on GroupChannel
+if (channel.isAIAgent) {
+    // Handle AI Agent channel
+}
+if (channel.isDesk) {
+    // Handle Desk channel
+}
+```
 ## v4.26.0 (May 17, 2025)
 ### Feature
 - Added `markAsUnread(message: BaseMessage)` to `GroupChannel`. This new feature changes the read status of messages in the channel to `unread`, starting from the specified message.
