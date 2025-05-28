@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.27.1 (May 28, 2025)
+### Improvements
+- Fixed an issue where some channels were not being received when fetching changes to channels.
 ## v4.27.0 (May 26, 2025)
 ### Features
 
