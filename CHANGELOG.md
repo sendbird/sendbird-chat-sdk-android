@@ -1,5 +1,15 @@
 # Changelog
 
+## v4.27.2 (Jun 24, 2025)
+### Features
+- Added `knownActiveChannelUrl: String` to `MessengerSettingsParams` for AI Agent
+- Added new `GroupChannelHandler` events:
+    - Added `GroupChannelHandler.onUserMarkedRead(channel: GroupChannel, userIds: List<String>)` and `GroupChannelHandler.onUserMarkedUnread(channel: GroupChannel, userIds: List<String>)`.
+    - Added `EVENT_USER_MARKED_READ` and `EVENT_USER_MARKED_UNREAD` event sources to `CollectionEventSource`.
+    - Added `OnUserMarkedRead(userIds: List<String>)` and `OnUserMarkedUnread(userIds: List<String>)` to `EventDetail`.
+    - Deprecated `GroupChannelHandler.onReadStatusUpdated(channel: GroupChannel)`.
+### Improvements
+- Fixed an issue where `GroupChannelCollection.loadMore()` did not fetch all available channels in certain cases.
 ## v4.27.1 (May 28, 2025)
 ### Improvements
 - Fixed an issue where some channels were not being received when fetching changes to channels.
