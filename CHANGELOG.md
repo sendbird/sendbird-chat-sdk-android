@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.27.3 (Jun 27, 2025)
+### Improvements
+- Fixed an issue where `GroupChannelCollection.loadMore()` callback was not called in certain cases due to inaccurate filtering logic with `GroupChannelListQuery`.
 ## v4.27.2 (Jun 24, 2025)
 ### Features
 - Added `knownActiveChannelUrl: String` to `MessengerSettingsParams` for AI Agent
