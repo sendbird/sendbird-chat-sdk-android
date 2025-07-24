@@ -1,5 +1,20 @@
 # Changelog
 
+## v4.28.0 (Jul 24, 2025)
+### Features
+- Added support for managing context objects for AI Agent in `GroupChannel`
+    - `GroupChannel.updateContext(aiAgentId: String, contextMap: Map<String, String>, handler: AIAgentContextHandler?)`
+    - `GroupChannel.patchContext(aiAgentId: String, contextMap: Map<String, String>, handler: AIAgentContextHandler?)`
+    - `GroupChannel.getContextObject(aiAgentId: String, handler: AIAgentContextHandler?)`
+
+- Added AI Agent group channel query APIs to `SendbirdChat.AIAgent`
+    - `createMyGroupChannelListQuery()`
+    - `getMyGroupChannelChangeLogsByTimestamp()`
+    - `getMyGroupChannelChangeLogsByToken()`
+    - `getUnreadMessageCount()`
+
+### Improvements
+- Improved `SendbirdChat.init()` to handle multiple synchronous calls more reliably
 ## v4.27.3 (Jun 27, 2025)
 ### Improvements
 - Fixed an issue where `GroupChannelCollection.loadMore()` callback was not called in certain cases due to inaccurate filtering logic with `GroupChannelListQuery`.
