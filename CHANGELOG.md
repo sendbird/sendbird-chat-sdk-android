@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.28.1 (Jul 25, 2025)
+### Improvements
+- Update the logic for parsing the variables field of `MessageTemplate` to use the raw JSON data instead.
 ## v4.28.0 (Jul 24, 2025)
 ### Features
 - Added support for managing context objects for AI Agent in `GroupChannel`
