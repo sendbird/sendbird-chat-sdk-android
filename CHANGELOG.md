@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.28.2 (Jul 31, 2025)
+### Improvements
+- Fixed an issue where messages with same `createdAt` timestamps disappeared from `MessageCollection`
 ## v4.28.1 (Jul 25, 2025)
 ### Improvements
 - Update the logic for parsing the variables field of `MessageTemplate` to use the raw JSON data instead.
