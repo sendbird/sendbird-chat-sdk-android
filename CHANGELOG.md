@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.28.3 (Aug 29, 2025)
+### Improvements
+- Fixed an issue where `BaseMessage.sender` could contain incorrect data in an `OpenChannel`
 ## v4.28.2 (Jul 31, 2025)
 ### Improvements
 - Fixed an issue where messages with same `createdAt` timestamps disappeared from `MessageCollection`
