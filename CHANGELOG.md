@@ -1,5 +1,15 @@
 # Changelog
 
+## v4.29.0 (Sep 24, 2025)
+### Features
+- Added new properties to `Conversation`:
+  - `handedOverAt: Long?` — The timestamp when the conversation was handed over to a human agent.
+  - `aiAgentId: String?` — The ID of the AI agent associated with the conversation.
+- Added new properties to `GroupChannel`:
+  - `helpdesk: HelpdeskInfo` — The helpdesk information of this channel for accessing helpdesk-related data.
+
+### Improvements
+- Improved SQL safety in SDK local DB
 ## v4.28.3 (Aug 29, 2025)
 ### Improvements
 - Fixed an issue where `BaseMessage.sender` could contain incorrect data in an `OpenChannel`
