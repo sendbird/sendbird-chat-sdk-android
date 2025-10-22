@@ -1,5 +1,50 @@
 # Changelog
 
+## v4.30.0 (Oct 22, 2025)
+### Features
+
+- Added `onConnectionDelayed` callback to `ConnectionHandler`.
+  - A new callback method that is invoked when the server is overloaded. This callback provides information about the delay time before automatic reconnection. After the delayed time period, the SDK automatically initiates reconnection and triggers the callback sequence: `onReconnectStarted` → `onReconnectSucceeded`
+    ```kotlin
+    interface ConnectionHandler {
+        fun onConnected(userId: String) {}
+        fun onDisconnected(userId: String) {}
+        fun onReconnectStarted() {}
+        fun onReconnectSucceeded() {}
+        fun onReconnectFailed() {}
+
+        /**
+        * A callback for when the connection is delayed.
+        *
+        * @param retryAfter The time in seconds to wait before the next reconnection attempt.
+        */
+        fun onConnectionDelayed(retryAfter: Long) {}
+    }
+
+    SendbirdChat.connect(USER_ID, AUTH_TOKEN) { user, e ->
+        if (e != null) {
+            if (e.code == SendbirdError.ERR_CONNECTION_DELAYED) {
+                val data = e.data
+                // The delay time in seconds before automatic reconnection
+                val retryAfter: Long = data["retry_after"] as? Long ?: 0
+                // Server-provided reason code for the delay
+                val message = data["message"] as? String ?: ""
+                // Detailed error message explaining the delay
+                val reasonCode: Int = data["reason_code"] as? Int ?: 0
+
+                // The SDK will automatically retry after the specified delay time
+                // and the result will be notified through ConnectionHandler.onReconnectSucceeded().
+                return@connect
+            }
+        }
+        // Connection successful
+    }
+    ```
+- Added `SendbirdChat.Options.setTypingIndicatorInvalidateTime(invalidateTimeMillis: Long)`
+   - Sets typing indicator invalidation time. Defaults to 10000 (10 seconds)
+
+### Improvements
+- Added a condition in `AIAgentGroupChannelListQuery.belongsTo()` to exclude non–AI Agent and non–Desk channels from the query results.
 ## v4.29.0 (Sep 24, 2025)
 ### Features
 - Added new properties to `Conversation`:
