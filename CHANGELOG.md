@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.31.0 (Oct 29, 2025)
+### Features
+- Added support for closing conversation manually for AI Agent in `GroupChannel`
+    - `GroupChannel.closeConversation(handler: CompletionHandler?)`
+
 ## v4.30.0 (Oct 22, 2025)
 ### Features
 
