@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.31.1 (Nov 03, 2025)
+### Improvements
+- Fixed a possible binary compatibility issue when using Chat SDK in multiple products.
 ## v4.31.0 (Oct 29, 2025)
 ### Features
 - Added support for closing conversation manually for AI Agent in `GroupChannel`
