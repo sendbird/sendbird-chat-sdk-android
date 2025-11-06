@@ -1,4 +1,10 @@
 # Changelog
+## v4.32.0 (Nov 06, 2025)
+### Features
+- Added AI Agent Message Feedback coroutine extensions
+    - Added `SendbirdChat.AIAgent.awaitCreateMessageFeedback()` suspend function
+    - Added `SendbirdChat.AIAgent.awaitUpdateMessageFeedback()` suspend function
+    - Added `SendbirdChat.AIAgent.awaitDeleteMessageFeedback()` suspend function
 ## v4.31.1 (Nov 03, 2025)
 ### Features
 - Updated chat sdk to version 4.31.1
