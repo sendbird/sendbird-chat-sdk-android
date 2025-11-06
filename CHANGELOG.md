@@ -1,5 +1,14 @@
 # Changelog
 
+## v4.32.0 (Nov 06, 2025)
+### Features
+- Added AI Agent Message Feedback APIs
+    - Added `SendbirdChat.AIAgent.createMessageFeedback()` to create feedback for AI agent messages
+    - Added `SendbirdChat.AIAgent.updateMessageFeedback()` to update existing feedback
+    - Added `SendbirdChat.AIAgent.deleteMessageFeedback()` to delete feedback
+    - Added `AIAgentMessageFeedbackRating` enum (GOOD, BAD)
+    - Added `AIAgentMessageFeedbackCreateParams`, `AIAgentMessageFeedbackUpdateParams`, `AIAgentMessageFeedbackDeleteParams`
+    - Added corresponding handlers: `AIAgentMessageFeedbackCreateHandler`, `AIAgentMessageFeedbackUpdateHandler`, `AIAgentMessageFeedbackDeleteHandler`
 ## v4.31.1 (Nov 03, 2025)
 ### Improvements
 - Fixed a possible binary compatibility issue when using Chat SDK in multiple products.
