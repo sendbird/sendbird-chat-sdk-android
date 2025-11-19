@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.32.1 (Nov 19, 2025)
+### Improvements
+- Fixed an issue where `SendbirdChat.connect()` returned `User` object as `null` in the `ConnectHandler` even when `SendbirdChat.currentUser` existed during the reconnection process.
 ## v4.32.0 (Nov 06, 2025)
 ### Features
 - Added AI Agent Message Feedback APIs
