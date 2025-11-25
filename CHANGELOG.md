@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.32.2 (Nov 25, 2025)
+### Improvements
+- Updated sdk request log with more details for better debugging.
 ## v4.32.1 (Nov 19, 2025)
 ### Improvements
 - Fixed an issue where `SendbirdChat.connect()` returned `User` object as `null` in the `ConnectHandler` even when `SendbirdChat.currentUser` existed during the reconnection process.
