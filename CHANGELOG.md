@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.32.3 (Dec 10, 2025)
+### Improvements
+- Fixed message resend functionality to properly handle rate limit errors (`900200`).
 ## v4.32.2 (Nov 25, 2025)
 ### Improvements
 - Updated sdk request log with more details for better debugging.
