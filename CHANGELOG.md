@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.32.4 (Dec 17, 2025)
+### Improvements
+- Added `SendbirdChat` prefix to SDK's debug log tags for easier filtering
 ## v4.32.3 (Dec 10, 2025)
 ### Improvements
 - Fixed message resend functionality to properly handle rate limit errors (`900200`).
