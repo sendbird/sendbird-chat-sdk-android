@@ -1,4 +1,9 @@
 # Changelog
+## v4.33.0 (Feb 10, 2026)
+### Features
+- Added AI Agent conversation initialization coroutine extension
+    - Added `GroupChannel.awaitInitConversation(params: InitConversationParams)` suspend function
+
 ## v4.32.0 (Nov 06, 2025)
 ### Features
 - Added AI Agent Message Feedback coroutine extensions
