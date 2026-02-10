@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.33.0 (Feb 10, 2026)
+### Features
+- Added support for initializing AI Agent conversations in `GroupChannel`
+    - `GroupChannel.initConversation(params: InitConversationParams, handler: CompletionHandler?)`
+    - `InitConversationParams(aiAgentId: String)`
+    - If there is an existing open conversation, an error will be returned
+
+- Added new property to `Conversation`
+    - `context: String?` — The context object for the AI Agent
+
+- Added new `ConversationStatus` enum value
+    - `ConversationStatus.INITIALIZED` — Represents an initialized conversation state
 ## v4.32.4 (Dec 17, 2025)
 ### Improvements
 - Added `SendbirdChat` prefix to SDK's debug log tags for easier filtering
