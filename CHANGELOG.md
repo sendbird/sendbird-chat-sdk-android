@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.33.1 (Feb 20, 2026)
+### Improvements
+- Added `message` property to `MultipleFilesMessageCreateParams` to support sending both files and message text simultaneously.
+- Remove interfaces that are no longer supported.
 ## v4.33.0 (Feb 10, 2026)
 ### Features
 - Added support for initializing AI Agent conversations in `GroupChannel`
