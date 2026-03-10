@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.34.0 (Mar 10, 2026)
+### Features
+- Added `updateContext(String, String, Map<String, String>, AIAgentContextHandler?)` and `patchContext(String, String, Map<String, String>, AIAgentContextHandler?)` to `SendbirdChat.AIAgent` for managing AI agent context.
+
+### Bug Fixes
+- Fixed an issue where `customTypes` was set to non-null after calling `MessageListParams.copy()`.
 ## v4.33.1 (Feb 20, 2026)
 ### Improvements
 - Added `message` property to `MultipleFilesMessageCreateParams` to support sending both files and message text simultaneously.
