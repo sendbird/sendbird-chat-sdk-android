@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.34.1 (Mar 17, 2026)
+### Features
+### Deprecated
+- Deprecated `BaseMessage.messageForm`, `BaseMessage.myFeedback`, and `BaseMessage.myFeedbackStatus`. These features are no longer supported as of 4.34.1.
+- Deprecated `BaseMessage.submitMessageForm(CompletionHandler?)`, `submitFeedback(FeedbackRating, String?, FeedbackHandler?)`, `updateFeedback(FeedbackRating, String?, FeedbackHandler?)`, and `deleteFeedback(CompletionHandler?)`. These features are no longer supported as of 4.34.1.
+- Deprecated `Feedback`, `FeedbackRating`, `FeedbackStatus`, and `FeedbackHandler`. These features are no longer supported as of 4.34.1.
 ## v4.34.0 (Mar 10, 2026)
 ### Features
 - Added `updateContext(String, String, Map<String, String>, AIAgentContextHandler?)` and `patchContext(String, String, Map<String, String>, AIAgentContextHandler?)` to `SendbirdChat.AIAgent` for managing AI agent context.
