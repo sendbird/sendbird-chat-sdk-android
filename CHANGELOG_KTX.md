@@ -1,4 +1,11 @@
 # Changelog
+## v4.34.1 (Mar 17, 2026)
+### Features
+- Added KTX extension functions for `SendbirdChat.AIAgent.updateContext` and `patchContext`:
+  - `suspend fun SendbirdChat.AIAgent.awaitUpdateContext(String, String, Map<String, String>): String`
+  - `suspend fun SendbirdChat.AIAgent.awaitPatchContext(String, String, Map<String, String>): String`
+  - `fun SendbirdChat.AIAgent.updateContext(String, String, Map<String, String>, ResultHandler<String>?)`
+  - `fun SendbirdChat.AIAgent.patchContext(String, String, Map<String, String>, ResultHandler<String>?)`
 ## v4.34.0 (Mar 10, 2026)
 ### Features
 - Added KTX extension functions for `SendbirdChat.AIAgent.updateContext` and `patchContext`:
