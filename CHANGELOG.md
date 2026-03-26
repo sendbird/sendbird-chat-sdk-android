@@ -1,5 +1,23 @@
 # Changelog
 
+## v4.35.0 (Mar 26, 2026)
+### Features
+- Added support for weekly Do Not Disturb schedules, allowing users to configure per-day-of-week time windows.
+    - `SendbirdChat.setWeeklyDoNotDisturb(Map, TimeZone, CompletionHandler?)`
+    - `SendbirdChat.getWeeklyDoNotDisturb(WeeklyDoNotDisturbHandler?)`
+    - `SendbirdChat.clearWeeklyDoNotDisturb(CompletionHandler?)`
+    - `SendbirdChat.HMS.setWeeklyDoNotDisturb(Map, TimeZone, CompletionHandler?)`
+    - `SendbirdChat.HMS.getWeeklyDoNotDisturb(WeeklyDoNotDisturbHandler?)`
+    - `SendbirdChat.HMS.clearWeeklyDoNotDisturb(CompletionHandler?)`
+
+### Improvements
+- Added `joinedAt` property to `Member` to expose the timestamp when the member joined the channel.
+- Added `requestedAt` property to `Handoff` to expose the timestamp when the handoff was requested.
+
+### Deprecated
+- Deprecated `SendbirdChat.setDoNotDisturb()` and `SendbirdChat.HMS.setDoNotDisturb()`. Use `setWeeklyDoNotDisturb()` instead.
+- Deprecated `SendbirdChat.getDoNotDisturb()` and `SendbirdChat.HMS.getDoNotDisturb()`. Use `getWeeklyDoNotDisturb()` instead.
+- Deprecated `DoNotDisturbHandler`. Use `WeeklyDoNotDisturbHandler` instead.
 ## v4.34.1 (Mar 17, 2026)
 ### Features
 ### Deprecated
