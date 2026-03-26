@@ -1,4 +1,25 @@
 # Changelog
+## v4.35.0 (Mar 26, 2026)
+### Features
+- Added coroutine and ResultHandler extensions for weekly Do Not Disturb schedules.
+    - `suspend fun SendbirdChat.awaitSetWeeklyDoNotDisturb(Map, TimeZone)`
+    - `suspend fun SendbirdChat.awaitGetWeeklyDoNotDisturb(): WeeklyDoNotDisturbResult`
+    - `suspend fun SendbirdChat.awaitClearWeeklyDoNotDisturb()`
+    - `suspend fun SendbirdChat.HMS.awaitSetWeeklyDoNotDisturb(Map, TimeZone)`
+    - `suspend fun SendbirdChat.HMS.awaitGetWeeklyDoNotDisturb(): WeeklyDoNotDisturbResult`
+    - `suspend fun SendbirdChat.HMS.awaitClearWeeklyDoNotDisturb()`
+    - `SendbirdChat.setWeeklyDoNotDisturb(Map, TimeZone, ResultHandler?)`
+    - `SendbirdChat.getWeeklyDoNotDisturb(ResultHandler?)`
+    - `SendbirdChat.clearWeeklyDoNotDisturb(ResultHandler?)`
+    - `SendbirdChat.HMS.setWeeklyDoNotDisturb(Map, TimeZone, ResultHandler?)`
+    - `SendbirdChat.HMS.getWeeklyDoNotDisturb(ResultHandler?)`
+    - `SendbirdChat.HMS.clearWeeklyDoNotDisturb(ResultHandler?)`
+
+### Deprecated
+- Deprecated `SendbirdChat.awaitSetDoNotDisturb()` and `SendbirdChat.HMS.awaitSetDoNotDisturb()`. Use `awaitSetWeeklyDoNotDisturb()` instead.
+- Deprecated `SendbirdChat.awaitGetDoNotDisturb()` and `SendbirdChat.HMS.awaitGetDoNotDisturb()`. Use `awaitGetWeeklyDoNotDisturb()` instead.
+- Deprecated `SendbirdChat.getDoNotDisturb(ResultHandler?)` and `SendbirdChat.HMS.getDoNotDisturb(ResultHandler?)`. Use `getWeeklyDoNotDisturb(ResultHandler?)` instead.
+- Deprecated `DoNotDisturbResult`. Use `WeeklyDoNotDisturbResult` instead.
 ## v4.34.1 (Mar 17, 2026)
 ### Features
 - Added KTX extension functions for `SendbirdChat.AIAgent.updateContext` and `patchContext`:
