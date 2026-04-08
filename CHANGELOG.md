@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.36.0 (Apr 08, 2026)
+### Features
+- Added `BaseGroupChannelCollection` as an extensible base class for group channel collections.
+- Added `BaseGroupChannelListQuery` as a base class for `GroupChannelListQuery` and `AIAgentGroupChannelListQuery`.
+- Added `BaseGroupChannelChangeLogsParams` as a base class for `GroupChannelChangeLogsParams` and `AIAgentGroupChannelChangeLogsParams`.
+
+### Bug Fixes
+- Fixed an issue where message text and customType were not preserved when loading messages from the local database.
 ## v4.35.0 (Mar 26, 2026)
 ### Features
 - Added support for weekly Do Not Disturb schedules, allowing users to configure per-day-of-week time windows.
