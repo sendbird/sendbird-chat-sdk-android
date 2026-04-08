@@ -1,4 +1,7 @@
 # Changelog
+## v4.36.0 (Apr 08, 2026)
+### Features
+- Updated chat sdk to version 4.36.0
 ## v4.35.0 (Mar 26, 2026)
 ### Features
 - Added coroutine and ResultHandler extensions for weekly Do Not Disturb schedules.
