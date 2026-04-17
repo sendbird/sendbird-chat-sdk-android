@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.36.1 (Apr 17, 2026)
+### Improvements
+- Improved `GroupChannelListQuery` to prioritize custom type filter over AI agent and desk channel filters. When custom types filter explicitly includes AI agent or desk custom types, the corresponding exclusion filter is bypassed.
 ## v4.36.0 (Apr 08, 2026)
 ### Features
 - Added `BaseGroupChannelCollection` as an extensible base class for group channel collections.
