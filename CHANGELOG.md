@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.36.2 (Apr 28, 2026)
+### Improvements
+- Improved WebSocket connection timeout handling. When the resolver returns multiple IPs, the value configured via `SendbirdChat.Options.setConnectionTimeout(Int)` is applied to each IP attempt separately, with an overall connection budget of 2.5x across all attempts (e.g. 10s -> 25s).
+- Improved default REST API call timeout by applying a 25 second `callTimeout` ceiling to the default OkHttp client.
+
+### Bug Fixes
+- Fixed an issue where DNS resolution returning grouped IPv4 or IPv6 addresses could stall connection attempts on dual-stack networks. The resolver now interleaves IPv4 and IPv6 addresses to approximate happy-eyeballs failover. Applies to OkHttp 4 runtimes; OkHttp 5+ already interleaves by default.
+- Fixed an issue where a batched `READ` ACK could prematurely dispatch a pending handler of a different command type, causing `GroupChannel.sendUserMessage` / `GroupChannel.sendFileMessage` to fail with a Malformed-data (800130) error.
 ## v4.36.1 (Apr 17, 2026)
 ### Improvements
 - Improved `GroupChannelListQuery` to prioritize custom type filter over AI agent and desk channel filters. When custom types filter explicitly includes AI agent or desk custom types, the corresponding exclusion filter is bypassed.
