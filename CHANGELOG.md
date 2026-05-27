@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.36.3 (May 27, 2026)
+### Improvements
+- Improved `SendbirdChat.registerPushToken` to validate blank push tokens before sending the request.
 ## v4.36.2 (Apr 28, 2026)
 ### Improvements
 - Improved WebSocket connection timeout handling. When the resolver returns multiple IPs, the value configured via `SendbirdChat.Options.setConnectionTimeout(Int)` is applied to each IP attempt separately, with an overall connection budget of 2.5x across all attempts (e.g. 10s -> 25s).
