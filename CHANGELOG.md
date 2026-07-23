@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.36.4 (Jul 23, 2026)
+### Improvements
+- Improved internal resource management to prevent unnecessary thread creation when sending multiple files messages and querying group channels.
 ## v4.36.3 (May 27, 2026)
 ### Improvements
 - Improved `SendbirdChat.registerPushToken` to validate blank push tokens before sending the request.
