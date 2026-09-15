@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.36.5 (Sep 15, 2026)
+### Improvements
+- Improved the internal handling of the auto resend.
 ## v4.36.4 (Jul 23, 2026)
 ### Improvements
 - Improved internal resource management to prevent unnecessary thread creation when sending multiple files messages and querying group channels.
