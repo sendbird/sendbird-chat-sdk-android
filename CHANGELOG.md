@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.36.6 (Nov 03, 2026)
+### Improvements
+- Improved the internal handling of customer satisfaction survey submission and retrieval.
 ## v4.36.5 (Sep 15, 2026)
 ### Improvements
 - Improved the internal handling of the auto resend.
